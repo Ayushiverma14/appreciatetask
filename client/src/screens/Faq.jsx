@@ -71,17 +71,7 @@ function FaqPage() {
       </button>
       <h2 className="faq-heading">FAQ Section</h2>
 
-      {/* List of FAQs */}
-      {faqs.length > 0 && <div className="faq-list">
-        {faqs.map(faq => (
-          <div key={faq.id} className="faq-item">
-            <h3>{faq.question}</h3>
-            <p>{faq.answer}</p>
-            <button className="delete-button" onClick={() => deleteFaq(faq.id)}>Delete</button>
-            <button className="edit-button" onClick={() => setEditingFaq(faq)}>Edit</button>
-          </div>
-        ))}
-      </div>}
+      
 
 
       {/* Add New FAQ */}
@@ -126,6 +116,19 @@ function FaqPage() {
           <button className="faq-button" onClick={() => setEditingFaq(null)}>Cancel</button>
         </div>
       )}
+      {/* List of FAQs */}
+      {faqs.length > 0 && <div className="faq-list">
+        {faqs.map(faq => (
+          <div key={faq.id} className="faq-item">
+            <h3>{faq.question}</h3>
+            <p>{faq.answer}</p>
+            <button className="delete-button" onClick={() => deleteFaq(faq.id)}>Delete</button>
+            <button className="edit-button" onClick={() => setEditingFaq(faq)}>Edit</button>
+          </div>
+        ))}
+      </div>}
+
+      
     </div>
   );
 }
