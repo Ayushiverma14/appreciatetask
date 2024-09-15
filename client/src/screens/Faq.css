@@ -1,0 +1,161 @@
+/* Center the FAQ page vertically and horizontally */
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1e1e1e;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    padding: 20px;
+}
+
+/* FAQ heading styling */
+.faq-heading {
+    font-size: 36px;
+    font-weight: bold;
+    color: #00d9ff;
+    margin-bottom: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+  }
+
+/* Fade-in animation for the heading */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* FAQ list styling */
+.faq-list {
+    width: 80%;
+    max-width: 800px;
+    margin-bottom: 30px;
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Individual FAQ item styling */
+.faq-item {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.faq-item:hover {
+    background-color: #444;
+    transform: translateY(-5px);
+}
+
+/* FAQ question heading */
+.faq-item h3 {
+    font-size: 20px;
+    color: #00d9ff;
+    margin-bottom: 10px;
+}
+
+/* FAQ answer paragraph */
+.faq-item p {
+    font-size: 16px;
+    color: #ccc;
+}
+
+/* Add New FAQ section */
+.new-faq-container,
+.edit-faq-container {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Input styling */
+.faq-input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #444;
+    color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styling */
+.faq-button {
+    padding: 10px 20px;
+    margin: 0px 5px;
+    background-color: #00d9ff;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faq-button:hover {
+    background-color: #007bff;
+}
+
+/* Delete and Edit buttons styling */
+.delete-button, .edit-button {
+    padding: 8px 16px;
+    background-color: #ff4d4d;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #ff1a1a;
+}
+
+.edit-button:hover {
+    background-color: #f0ad4e;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .faq-list, .new-faq-container, .edit-faq-container {
+        width: 90%;
+    }
+
+    .faq-heading {
+        font-size: 28px;
+    }
+}

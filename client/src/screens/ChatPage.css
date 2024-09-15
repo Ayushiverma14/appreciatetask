@@ -1,0 +1,123 @@
+/* Center the chat page vertically and horizontally */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222; /* Dark background for a modern look */
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    padding: 20px;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+  }
+
+/* Chat heading styling */
+.chat-heading {
+    font-size: 36px;
+    font-weight: bold;
+    color: #00d9ff; /* Vibrant color for the heading */
+    margin-bottom: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeInHeading 1.5s ease-in-out;
+}
+
+/* Fade-in animation for heading */
+@keyframes fadeInHeading {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fruit list container */
+.fruit-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    max-width: 500px;
+}
+
+/* Individual fruit item styling */
+.fruit-item {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Hover effect on fruit items */
+.fruit-item:hover {
+    background-color: #444;
+    transform: translateY(-5px);
+}
+
+/* Selected fruit container */
+.selected-fruit {
+    background-color: #2a2a2a;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+    animation: popUp 0.5s ease;
+}
+
+/* Animation for popping up selected fruit */
+@keyframes popUp {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Styling for the 'Go Back' button */
+.go-back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect for 'Go Back' button */
+.go-back-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .chat-heading {
+        font-size: 28px;
+    }
+}

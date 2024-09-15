@@ -1,0 +1,32 @@
+/* Center the about page vertically and horizontally */
+.about-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #222;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+  }
+
+.about-container-p{
+    color: #b8b2b2;
+    max-width: 80rem;
+}
+
+.about-ul{
+    padding-left: 0;
+}
